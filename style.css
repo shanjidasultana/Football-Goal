@@ -1,0 +1,292 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color:rgba(173, 216, 230, 0.897);
+}
+header{
+    background-color:cadetblue;
+}
+/*-------------------
+    nav   start
+------------------------ */
+
+nav{
+    width:1140px ;
+    padding-top: 20px;
+    justify-content: space-between;
+    display: flex;
+
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+    list-style: none;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 15px;
+
+}
+nav ul li a{
+    position: relative;
+    padding: 10px 5px;
+    color: #fff;
+    font-size: 28px;
+    text-decoration: none;
+}
+label #sign-one,
+label #sign-two{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 50px;
+    display: none;
+    cursor: pointer;
+    margin-left: 30px;
+}
+#res-menu{
+    display: none;
+}
+.login a{
+    padding: 4px 4px;
+    border-radius: 5px;
+    background-color:gold;
+   
+}
+nav ul li a:hover{
+    background-color: gray;
+}
+/*-------------------
+    nav   end 
+------------------------ */
+
+/*-------------------
+    banner-section start
+------------------------ */
+
+.banner-section{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.banner-title{
+    width: 485px;
+    height: auto;
+    font-size: 35px;
+    color: white;
+    margin: 198px 102px 249px 147px;
+    
+}
+
+.banner-pic img{
+    width: 556px;
+    height: 438px;
+    margin: 153px 140px 86px 102px;
+
+}
+
+.banner-title p>a{
+    font-size: 16px;
+    align-items: center;
+    padding: 19px 24px 9px 24px;
+    background-color:#E02C6D ;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    border: none;
+    margin-bottom: 50px;
+    
+}
+.banner-title:hover p{
+    transition: transform 3s ease-in-out 0.2s;
+    transform:   rotate(360deg) scale(1.2);
+}
+/*-------------------
+    banner-section end 
+------------------------ */
+
+/*-------------------
+    container start 
+------------------------ */
+
+.container{
+    width: 1040px;
+    margin-top: 70px;
+    margin-left: 180px;
+    margin-right: 210px;
+    justify-content: center;
+
+}
+.players{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    grid-column-gap: 27px;
+    grid-row-gap:30px;
+    justify-content: center;
+}
+.player{
+    background-color: white;
+    padding: 15px;
+    width: 320px;
+    height: 500px;
+    justify-content: center;
+    box-shadow: 2px 4px 15px black;
+    border-radius: 5px;
+    
+}
+.player h1{
+    font-size: 28px;
+}
+.player p{
+    color: #6C6C6C;
+    font-size: 16px;
+}
+.player-pic img{
+    width:322px ;
+    height:256px;
+    
+}
+/*-------------------
+    container end 
+------------------------ */
+
+/* -----------------------
+       Other section start 
+----------------------- */
+.other-section{
+    display: flex;
+}
+.half-width{
+    width: 50%;
+    
+    margin-right: 25px;
+    padding:10px;
+}
+.half-width img{
+        width: 100%;
+}
+.half-width h1{
+    color:mediumblue;
+    font-size: 28px;
+}
+.half-width p{
+    line-height:25px;
+    color: #6C6C6C;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+.half-width a{
+    font-size: 20px;
+    color:white;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px 24px;
+    background: linear-gradient( 45deg ,red,tomato,yellow);
+}
+/* -----------------------
+       Other section end 
+----------------------- */
+
+/*----------------
+     footer start
+    ------------------ */
+  
+footer{
+    width: 484px;
+    height: 213px;
+    margin: 50px 100px 0 450px;
+  
+}
+.footer-logo img{
+    width: 484px;
+    height: 110px;
+    justify-content: center;
+    align-items: center;
+}
+.social-link{
+    padding: 15px;
+    text-align: center;
+    align-items: center;
+}
+.fab{
+    padding: 5px;
+    font-size: 35px;
+}
+/*----------------
+     footer end
+    ------------------ */
+  
+@media only screen and (max-width:500px) {
+    label #sign-one{
+        display: block;
+    }
+    label #sign-two{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        width:100%;
+        height: 100vh;
+        top: 50px;
+        left: -100%;
+        text-align: center;
+        transition: 0.5s;
+        z-index: 10;
+    }
+    nav ul li{
+        display: block;
+        margin: 40px 0;
+        line-height: 30px;
+
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    #res-menu:checked ~ul{
+        left: 0;
+    }
+    #res-menu:checked ~lable #sign-one{
+        display: none;
+    }
+    #res-menu:checked ~lable #sign-one{
+        display: none;
+    }
+    
+    .banner-section{
+        display: flex;
+        flex-direction: column;
+    }
+    .banner-title,.banner-pic img{
+        width:100%;
+        font-size: 24px;
+        margin: auto;
+        margin-top: 50px;
+    }
+    .container{
+        width: 100%;
+        margin:auto;
+    }
+    .players,.other-section{
+        flex-direction: column;
+        grid-template-columns: repeat(1,1fr);
+        
+    }
+    .player, .half-width,.footer-logo,.social-link{
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+      footer{
+        grid-template-columns: repeat(1,1fr);
+        margin: auto;
+        flex-direction: column;
+        font-size:16px ;
+       
+    }
+    .footer-logo img{
+        width: 90%;
+    }
+    
+}
+
